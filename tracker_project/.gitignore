@@ -1,0 +1,87 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Distribution / packaging
+.Python
+_build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written into a dist/ folder.
+#  On some operating systems, however, they are written into the local folder.
+**/dist/
+**/build/
+.env*
+.DS_Store
+
+# Django stuff:
+*.log
+*.pot
+*.sqlite3
+*.sqlitedb
+local_settings.py
+db.sqlite3
+
+# Media files
+/media/*
+!/media/.gitkeep
+
+# Static files
+/static/*
+!/static/.gitkeep
+
+# VS Code
+.vscode/
+
+# JetBrains IDEs
+.idea/
+
+# OS generated files #
+######################
+.DS_Store
+Thumbs.db
+Thumbs.db:Zone.Identifier
+
+# General
+tmp/
+temp/
+*.swp
+*.bak
+*.tmp
+*~
+.idea/
+*.orig
+*.~
+.swp
+.swo
+.DS_Store
+
+# Poetry
+poetry.lock
+
+# node_modules
+node_modules/
