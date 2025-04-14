@@ -1,7 +1,13 @@
-from django.urls import path
-from . import views
+
+# calendar/urls.py
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import CalendarEventViewSet
+
+router = DefaultRouter()
+router.register(r'events', CalendarEventViewSet, basename='calendar-event')
 
 urlpatterns = [
-    path('', views.calendarr_view, name='calendarr_view'),
-    path('event/<int:event_id>/', views.event_detail, name='event_detail'),
+    path('', include(router.urls)),
 ]
+

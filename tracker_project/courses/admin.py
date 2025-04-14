@@ -1,6 +1,15 @@
+# courses/admin.py
 from django.contrib import admin
-from .models import *  # Replace * with specific model names if needed
+from .models import CourseCategory, Course
 
-# Register your models here.
-admin.site.register(Course)  # Example: Register the Course model
-# Register other models from the courses app here
+@admin.register(CourseCategory)
+class CourseCategoryAdmin(admin.ModelAdmin):
+    list_display = ['name', 'description']
+    search_fields = ['name', 'description']
+
+@admin.register(Course)
+class CourseAdmin(admin.ModelAdmin):
+    list_display = ['name', 'category', 'progress', 'user']
+    list_filter = ['category', 'user']
+    search_fields = ['name', 'description', 'category__name']
+
