@@ -1,6 +1,11 @@
-from django.contrib import admin
-from .models import *  # Replace * with specific model names if needed
 
-# Register your models here.
-admin.site.register(CalendarEvent)  # Example: Register the Event model
-# Register other models from the calendarr app here
+# calendar/admin.py
+from django.contrib import admin
+from .models import CalendarEvent
+
+@admin.register(CalendarEvent)
+class CalendarEventAdmin(admin.ModelAdmin):
+    list_display = ['title', 'start_datetime', 'end_datetime', 'user']
+    list_filter = ['start_datetime', 'all_day', 'user']
+    search_fields = ['title', 'description', 'location']
+
